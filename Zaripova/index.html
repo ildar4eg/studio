@@ -1,0 +1,116 @@
+<canvas id="myCanvas" width="1000" height="1000">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+//туловище
+ctx.moveTo(130,234);
+ctx.lineTo(370,234);
+ctx.strokeStyle = 'lime';
+ctx.lineWidth = 15;
+ctx.stroke();
+
+//туловище
+ctx.moveTo(360,240);
+ctx.lineTo(437,120);
+ctx.strokeStyle = 'lime';
+ctx.lineWidth = 15;
+ctx.stroke();
+
+//окружность 
+ctx.beginPath();
+ctx.scale(1.6, 1);
+ctx.strokeStyle = 'lime'; 
+ctx.lineWidth = 5;
+ctx.arc(150, 145, 75, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = 'lime';
+ctx.fill(); 
+ctx.stroke();
+
+//окружность2
+ctx.beginPath();
+ctx.scale(1.2, 1);
+ctx.strokeStyle = 'white'; 
+ctx.lineWidth = 3;
+ctx.arc(190, 167, 50, 0 , Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = 'green';
+ctx.fill(); 
+ctx.stroke();
+
+//голова
+ctx.beginPath();
+ctx.scale(1, 1);
+ctx.strokeStyle = 'lime'; 
+ctx.lineWidth = 5;
+ctx.arc(445, 120, 30, 0 , Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = 'lime';
+ctx.fill(); 
+ctx.stroke();
+
+//усики
+ctx.moveTo(420,60);
+ctx.lineTo(432,90);
+ctx.strokeStyle = 'lime';
+ctx.lineWidth = 3;
+ctx.stroke();
+
+//усики2
+ctx.moveTo(472,60);
+ctx.lineTo(460,95);
+ctx.strokeStyle = 'lime';
+ctx.lineWidth = 3;
+ctx.stroke();
+
+//левый глаз
+ctx.beginPath();
+ctx.scale(1, 1);
+ctx.strokeStyle = 'white'; 
+ctx.lineWidth = 4;
+ctx.arc(435, 117, 8, 0 , Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill(); 
+ctx.stroke();
+
+//правый глаз
+ctx.beginPath();
+ctx.scale(1, 1);
+ctx.strokeStyle = 'white'; 
+ctx.lineWidth = 4;
+ctx.arc(457, 117, 8, 0 , Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill(); 
+ctx.stroke();
+
+// Рисуем рот 
+ctx.beginPath(); 
+ctx.strokeStyle = 'black'; 
+ctx.moveTo(430,135); 
+ctx.quadraticCurveTo(445,145,460,135); 
+ctx.resetTransform();
+ctx.closePath(); 
+ctx.fillStyle = 'black'; 
+ctx.fill();
+ctx.stroke(); 
+
+//текст 
+ctx.beginPath();
+ctx.fillStyle = 'black';
+ctx.font = 'bold 30pt Arial Narrow';
+ctx.fillText('Вариант 6, Зарипова Э., М-11', 130, 400);
+
+</script>
+
