@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="320" height="420">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+// ctx.beginPath();
+ctx.strokeStyle = 'Black'; 
+ctx.lineWidth = 10;
+ctx.arc(140,50, 20, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'yellow';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 10;
+ctx.arc(80,50, 20, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'yellow';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'yellow'; 
+ctx.lineWidth = 9;
+ctx.arc(80,50, 20, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'red';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'yellow'; 
+ctx.lineWidth = 9;
+ctx.arc(140,50, 20, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'red';
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 1;
+ctx.arc(62,108, 35, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'yellow';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 1;
+ctx.arc(156,108, 35, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'yellow';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 1;
+ctx.arc(50,95, 13, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'blue';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 1;
+ctx.arc(77,115, 13, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'lime';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 1;
+ctx.arc(170,95, 13, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'blue';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 1;
+ctx.arc(144,115, 13, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'lime';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 0;
+ctx.arc(110,17, 10, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.scale(1,15); // растягиваем по вертикали в 4 раза
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 2;
+ctx.arc(110, 6,4, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = 'brown';
+ctx.fill(); 
+ctx.stroke();
+
+ctx.strokeStyle = 'black';
+ctx.lineWidth = 1;
+ctx.beginPath();
+ctx.moveTo(121, 20);
+ctx.quadraticCurveTo(100, 2, 140, 1);
+ctx.stroke();
+
+ctx.strokeStyle = 'black';
+ctx.lineWidth = 1;
+ctx.beginPath();
+ctx.moveTo(121, 20);
+ctx.quadraticCurveTo(120, 2, 80, 1);
+ctx.stroke();
+
+ctx.fillStyle = "#0000FF";
+ctx.strokeStyle = "#FF0000";
+ctx.font = "italic 10pt Arial";
+ctx.fillText("Нургалиева М-11", 150, 20);
+ctx.fillStyle = 'black';
+ctx.font = "bold 16pt Arial Narrow";
+ctx.fillText("Бабочка", 170, 40);
+
+
+
+  </script>
