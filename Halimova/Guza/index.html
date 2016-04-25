@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+
+ctx.beginPath();
+ctx.scale(2, 1); // растягиваем по горизонтали в 2 раза
+ctx.strokeStyle = '#66CC33'; 
+ctx.lineWidth = 5;
+ctx.arc(150, 150, 50, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#99CC33';
+ctx.fill(); 
+ctx.stroke();
+ 
+
+
+ctx.beginPath();
+ctx.scale(3, 1); // растягиваем по горизонтали в 2 раза
+ctx.arc(85, 200, 10, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#669900';
+ctx.fill(); 
+
+ctx.beginPath();
+ctx.scale(3, 1); // растягиваем по горизонтали в 2 раза
+ctx.arc(115, 200, 10, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#669900';
+ctx.fill(); 
+
+ctx.beginPath();
+ctx.scale(2, 1); // растягиваем по горизонтали в 2 раза
+ctx.arc(150, 70, 35, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#669900';
+ctx.fill(); 
+
+ctx.beginPath();
+ctx.scale(1, 1); 
+ctx.arc(270, 35, 15, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#FFFF33';
+ctx.fill(); 
+
+ctx.beginPath();
+ctx.scale(1, 1); 
+ctx.arc(320, 35, 15, 0, Math.PI*2, true);
+ctx.resetTransform();
+ctx.closePath();
+ctx.fillStyle = '#FFFF33';
+ctx.fill(); 
+
+ctx.fillStyle = "#990066";
+ctx.strokeStyle = "#660066";
+ctx.font = "italic 30pt Arial";
+ctx.fillText("Лягушка", 200, 300);
+ctx.font = 'bold 30px sans-serif';
+ctx.strokeText("Халимова", 200, 350);
+
+</script>
