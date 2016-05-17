@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="1000">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+</body>
+</html>
+<script type="text/javascript">
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+// 
+//1 круг 
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 5;
+ctx.arc(250, 500, 80, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//2 круг
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 5;
+ctx.arc(250, 370, 60, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//руки
+ctx.moveTo(205,330);
+ctx.lineTo(100,390);
+ctx.stroke();
+ctx.moveTo(295,330);
+ctx.lineTo(400,350);
+ctx.stroke();
+//3 круг
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 5;
+ctx.arc(250, 270, 50, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//глаза
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 5;
+ctx.arc(275, 260, 5, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+//глаза
+ctx.beginPath();
+ctx.strokeStyle = 'black'; 
+ctx.lineWidth = 5;
+ctx.arc(235, 260, 5, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+// нос
+ctx.beginPath();
+ctx.moveTo(250, 277);
+ctx.lineTo(275, 285);
+ctx.lineTo(257, 270);
+ctx.lineTo(250, 277);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+//рот
+ctx.beginPath();
+ctx.fillStyle = "black";
+ctx.moveTo(235,295);
+ctx.quadraticCurveTo(252,315,270,295);
+ctx.quadraticCurveTo(252,320,235,295); 
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+//ведро
+ctx.beginPath();
+ctx.fillStyle = 'black';
+ctx.strokeStyle = 'black'; 
+ctx.moveTo(200, 230); 
+ctx.lineTo(300, 230); 
+ctx.lineTo(280, 140); 
+ctx.lineTo(222, 140); 
+ctx.lineTo(200, 230); 
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+
+//метла
+ctx.moveTo(420,205);
+ctx.lineTo(370,570);
+ctx.stroke();
+ctx.moveTo(420,206);
+ctx.lineTo(370,115);
+	ctx.moveTo(420,206);
+	ctx.lineTo(390,105);
+ctx.moveTo(420,206);
+ctx.lineTo(410,100);
+	ctx.moveTo(420,206);
+	ctx.lineTo(430,100);
+ctx.moveTo(420,206);
+ctx.lineTo(450,105);
+	ctx.moveTo(420,206);
+	ctx.lineTo(470,115);
+ctx.stroke();
+
+
+
+</script>
