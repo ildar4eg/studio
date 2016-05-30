@@ -1,0 +1,105 @@
+var myCanvas = document.getElementById('myCanvas');
+var ctx = myCanvas.getContext('2d');
+
+//окружность тела 1
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 2;
+ctx.arc(300, 400, 80, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//окружность тела 2
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 2;
+ctx.arc(300, 260, 60, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//окружность тела 3
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 2;
+ctx.arc(300, 160, 40, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//глаза
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 2;
+ctx.arc(315, 150, 5, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = 'dark'; 
+ctx.lineWidth = 2;
+ctx.arc(285, 150, 5, 0, Math.PI*2, true);
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//нос
+ctx.beginPath();
+ctx.moveTo(305,160);
+ctx.lineTo(280,170);
+ctx.lineTo(305,170);
+ctx.lineWidth = 2;
+ctx.stroke();
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//рот
+ctx.moveTo(310,180);
+ctx.lineTo(285,180);
+ctx.stroke()
+//шапка
+ctx.beginPath();
+ctx.moveTo(330,120);
+ctx.lineTo(270,120);
+ctx.lineTo(270,80);
+ctx.lineTo(330,80);
+ctx.lineWidth = 2;
+ctx.stroke();
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//руки
+ctx.beginPath();
+ctx.moveTo(450,220);
+ctx.lineTo(340,220);
+ctx.lineTo(340,240);
+ctx.lineTo(450,240);
+ctx.lineWidth = 2;
+ctx.stroke();
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(260,220);
+ctx.lineTo(150,220);
+ctx.lineTo(150,240);
+ctx.lineTo(260,240);
+ctx.lineWidth = 2;
+ctx.stroke();
+ctx.closePath();
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+//палка
+ctx.moveTo(150,100);
+ctx.lineTo(150,450);
+ctx.stroke()
+//текст
+ctx.fillStyle = "black";
+ctx.font = 'bold 30px sans serif';
+ctx.fillText("Вариант №7, М-11, Ирдубаев Д.А.", 20, 520);
