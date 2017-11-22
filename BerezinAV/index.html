@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>canvas</title>
+  <meta charset="utf-8">
+
+  <canvas id="myCanvas" width="320" height="420">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+
+<script type="text/javascript">
+	var myCanvas = document.getElementById('myCanvas');
+	var cxt = myCanvas.getContext('2d');
+	// тело 
+	cxt.scale(1.2, 2);
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#ff0000";
+	cxt.lineWidth = 2;
+	cxt.beginPath();
+	cxt.arc(100,100,50,0,Math.PI*2,true);
+	cxt.resetTransform();
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	// линия
+	cxt.moveTo(120,100);
+	cxt.lineTo(120,300);
+	cxt.stroke();
+	// голова
+	cxt.fillStyle="#000000";
+	cxt.strokeStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(120,100,15,0,Math.PI,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	// усы
+	cxt.strokeStyle = '#000000';
+	cxt.lineWidth = 2;
+	cxt.beginPath();
+	cxt.moveTo(120, 100);
+	cxt.quadraticCurveTo(120, 30, 68, 35);
+	cxt.stroke();
+	cxt.strokeStyle = '#000000';
+	cxt.lineWidth = 2;
+	cxt.beginPath();
+	cxt.moveTo(120, 100);
+	cxt.quadraticCurveTo(120, 30, 168, 35);
+	cxt.stroke();
+	// пятна
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(135,135,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(105,135,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(135,165,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(100,165,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(78,195,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(160,195,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(106,225,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(140,225,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(85,255,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(155,255,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(106,275,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+	cxt.strokeStyle = "#000000";
+	cxt.fillStyle = "#000000";
+	cxt.beginPath();
+	cxt.arc(134,275,10,0,Math.PI*2,true);
+	cxt.closePath();
+	cxt.stroke();
+	cxt.fill();
+</script>
+</head>
+<body>
+</html>
