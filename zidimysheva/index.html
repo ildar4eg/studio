@@ -1,0 +1,125 @@
+<html>
+ <head>
+  <title>Лабораторная работа №1</title>
+  <meta charset="utf-8">
+
+  <canvas id="smile" width="320" height="420">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+
+<script type="text/javascript">
+    var myCanvas = document.getElementById('smile');
+
+     var cxt = myCanvas.getContext('2d');
+     // Рисуем окружность 
+     cxt.strokeStyle = "red";
+     cxt.fillStyle = "red";
+     cxt.beginPath();
+     cxt.arc(100,100,50,0,Math.PI*2,true);
+     cxt.closePath();
+     cxt.stroke();
+     cxt.fill();
+    // Рисуем прямоугольник
+ 	cxt.fillStyle="black";
+	cxt.fillRect(130,180,40,90);
+
+   // Рисуем еще прямоугольник
+	 
+ 	cxt.fillStyle="black";
+	cxt.fillRect(30,240,40,90);
+
+  // Рисуем линию 
+	cxt.strokeStyle = 'blue';
+	cxt.moveTo(100,50);
+	cxt.lineTo(100,10);
+	cxt.stroke();
+   
+// Рисуем линию 
+	cxt.strokeStyle = 'purple';
+	cxt.moveTo(10,10);
+	cxt.lineTo(100,10);
+	cxt.stroke();
+// Рисуем линию 
+	cxt.strokeStyle = 'pink';
+	cxt.moveTo(100,10);
+	cxt.lineTo(20,10);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(200,10);
+	cxt.lineTo(20,10);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(50,240);
+	cxt.lineTo(50,90);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(150,180);
+	cxt.lineTo(150,90);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(200,170);
+	cxt.lineTo(200,260);
+	cxt.stroke();
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(190,230);
+	cxt.lineTo(200,260);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(210,230);
+	cxt.lineTo(200,260);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(10,240);
+	cxt.lineTo(10,330);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(10,240);
+	cxt.lineTo(25,270);
+	cxt.stroke();
+
+// Рисуем линию 
+	cxt.strokeStyle = 'black';
+	cxt.moveTo(10,240);
+	cxt.lineTo(-10,300);
+	cxt.stroke();
+
+
+
+  // Рисуем овал как сжатый круг
+      ctx.scale(2, 1); // сжимаем по вертикали в 2 раза
+
+      ctx.beginPath();
+
+      var centerX = 55;
+      var centerY = 500;
+      var radius = 50;
+      ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+
+      ctx.resetTransform();
+      ctx.closePath();
+
+      // красим
+      cxt.fillStyle = '#8ED6FF';
+      cxt.fill();
+      cxt.lineWidth = 5;
+      cxt.strokeStyle = 'black';
+      cxt.stroke();
+
+  </script>
+ </body>
+</html>
