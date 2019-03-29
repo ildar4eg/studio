@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta charset="utf-8">
+<canvas id="smile" width="620" height="820">
+<p>Ваш браузер не поддерживает рисование.</p>
+</canvas>
+
+<script type="text/javascript">
+var myCanvas = document.getElementById('smile');
+var cxt = myCanvas.getContext('2d');
+var pi = Math.PI;
+// голова
+cxt.lineWidth = 5 ;
+cxt.fillStyle = "#D3D3D3";
+cxt.arc(550,210,50,0, 2 * pi, true);
+cxt.stroke();
+cxt.fill();
+//левый глаз
+cxt.lineWidth = 8 ;
+cxt.strokeStyle = "white";
+cxt.fillStyle="black";
+cxt.beginPath();
+cxt.arc(525,200,8,0,Math.PI*2,true);525
+cxt.closePath();
+cxt.stroke();
+cxt.fill();
+//правый глаз
+cxt.lineWidth = 8 ;
+cxt.strokeStyle = "white";
+cxt.fillStyle="black";
+cxt.beginPath();
+cxt.arc(565,200,8,0,Math.PI*2,true);565
+cxt.closePath();
+cxt.stroke();
+cxt.fill();
+// рот
+cxt.lineWidth = 5 ;
+cxt.strokeStyle = "black";
+
+// антенны
+cxt.beginPath();
+cxt.strokeStyle = 'bkack';
+cxt.moveTo(570,163);585
+cxt.lineTo(585,110);
+cxt.moveTo(510,110);
+cxt.lineTo(530,163);
+cxt.stroke();
+
+</script>
+
+<script>
+var canvas = document.getElementById("smile");
+var context = canvas.getContext('2d');
+
+
+function drawArc(xPos, yPos, radius, startAngle, endAngle, anticlockwise, lineColor, fillColor)
+{
+var startAngle = startAngle * (Math.PI/180);
+var endAngle = endAngle * (Math.PI/180);
+var radius = radius;
+context.strokeStyle = lineColor;
+context.fillStyle = fillColor;
+context.lineWidth = 8;
+context.beginPath();
+context.arc(xPos, yPos, radius, startAngle, endAngle, anticlockwise);
+context.fill();
+context.stroke();
+}
+
+drawArc(550, 225, 25, 0, 180, false, "black", "black");225
+</script>
+<script>
+var c=document.getElementById("smile");
+var ctx=c.getContext("2d");
+1000
+ctx.beginPath();
+490
+// Создаем начальную точку
+ctx.moveTo(150,490);
+// Создаем горизонтальную линию
+ctx.lineTo(460,490);
+// Создаем дугу
+ctx.arcTo(550,490,550,100,100);
+// Продолжаем линию по вертикали
+ctx.lineTo(550,260);
+// Рисуем все
+ctx.stroke();
+</script>
+<script>
+var canvas = document.getElementById('smile');
+var context = canvas.getContext('2d');
+var centerX = 0;
+var centerY = 0;
+var radius = 80;
+context.save();
+context.translate(canvas.width / 2, canvas.height / 2);
+context.scale(2, 1);
+context.beginPath();
+context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+context.restore();
+context.fillStyle = '#808080';
+context.fill();
+context.lineWidth = 5;
+context.strokeStyle = 'black';
+context.stroke();
+</script>
+
+<script>
+var canvas = document.getElementById('smile');
+var context = canvas.getContext('2d');
+var centerX = 155;
+var centerY = 435;
+var radius = 50;
+context.save();
+context.scale(2, 1);
+context.beginPath();
+context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+context.restore();
+context.fillStyle = '#000000';
+context.fill();
+context.lineWidth = 5;
+context.strokeStyle = 'White';
+context.stroke();
+
+
+</script>
+
+</head>
+<body>
+</body>
+</html>
