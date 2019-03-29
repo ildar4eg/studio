@@ -1,0 +1,125 @@
+        <html>
+  
+    <body>
+        <canvas id="Гусеница"  width="1020" height="1000"
+          border:1px solid #ccc;">
+            Ваш браузер не поддерживает Canvas
+        </canvas>
+        <script>
+            var canvas = document.getElementById("Гусеница"), 
+                context = canvas.getContext("2d");
+            context.strokeStyle = "red";
+
+
+	
+
+
+             
+     context.beginPath();
+            context.arc(550, 90, 50, 0, Math.PI*2, false);
+            context.closePath();
+            context.stroke();
+          
+
+
+	context.beginPath();//глаз правый
+            context.arc(572,85,5,0,Math.PI*2,true);
+              context.fillStyle="Black";
+               context.fill();
+          
+	context.beginPath();//глаз левый
+            context.arc(532,85,5,0,Math.PI*2,true);
+              context.fillStyle="Black";
+               context.fill();
+	
+ 	 context.beginPath();//нос
+            context.moveTo(552, 100);
+            context.arc(552, 100, 5, 0, Math.PI/2, false);
+              context.fillStyle="Black";
+               context.fill();
+
+
+	context.beginPath();//рот
+            context.moveTo(552, 120);
+            context.arc(552, 120, 7, 0, Math.PI, false);
+             context.fillStyle="Red";
+               context.fill();
+
+
+	context.beginPath(); //усик левый
+	context.moveTo(520, 20);
+	context.lineTo(525, 20);
+	context.lineTo(525, 50);
+	context.lineTo(520, 50);
+	   context.fillStyle="Black";
+               context.fill();
+
+
+	context.beginPath(); //усик правый
+	context.moveTo(580, 20);
+	context.lineTo(585, 20);
+	context.lineTo(585, 50);
+	context.lineTo(580, 50);
+	//context.closePath();
+	//context.strokeStyle = "red";
+	//context.stroke();
+   context.fillStyle="Black";
+               context.fill();
+
+
+    
+	context.beginPath();//для усика круг
+            context.arc(582,17,5,0,Math.PI*2,true);
+             context.fillStyle="Black";
+               context.fill();
+
+
+	context.beginPath();//для усика круг
+            context.arc(522,17,5,0,Math.PI*2,true);
+          context.fillStyle="Black";
+               context.fill();
+
+
+
+     context.beginPath();
+            context.arc(550, 190, 50, 0, Math.PI*2, false);
+           // context.closePath();
+           // context.stroke();
+context.fillStyle="red";
+               context.fill();
+
+
+ 	context.beginPath();
+            context.arc(550, 280, 50, 0, Math.PI*2, false);
+         context.fillStyle="red";
+               context.fill();
+
+	context.beginPath();
+            context.arc(540, 360, 50, 0, Math.PI*2, false);
+            context.fillStyle="red";
+               context.fill();
+         
+
+	context.beginPath();
+            context.arc(459, 360, 50, 0, Math.PI*2, false);
+            context.closePath();
+           context.fillStyle="red";
+               context.fill();
+          
+
+	context.beginPath();
+            context.arc(379, 360, 50, 0, Math.PI*2, false);
+           context.fillStyle="red";
+               context.fill();
+
+
+	context.beginPath();
+            context.arc(299, 360, 50, 0, Math.PI*2, false);
+           context.fillStyle="red";
+               context.fill();
+
+
+             
+        </script>
+    </body>
+</html>
