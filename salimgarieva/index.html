@@ -1,0 +1,90 @@
+<script> 
+   window.onload = function() {
+
+    var drawingCanvas = document.getElementById('mypicture');
+    if(drawingCanvas && drawingCanvas.getContext) {
+     var context = drawingCanvas.getContext('2d');
+     // Рисуем прямоугольник
+		context.beginPath();
+		context.strokeStyle ="#000";
+		context.fillStyle="#00CED1";
+		context.lineWidth = 4;
+		context.fillRect(130,80,40,130);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем окошко первое
+		context.beginPath();	
+		context.strokeStyle = "#000";
+		context.fillStyle = "#ffffff";
+		context.lineWidth = 4;
+		context.arc(150, 100, 5, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+	
+
+		// рисуем окошко второе
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#ffffff";
+		context.lineWidth = 4;
+		context.arc(150, 130, 5, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+	
+
+		//рисуем верх ракеты
+		context.strokeStyle = "#000";
+		context.fillStyle="#00CED1";
+		context.beginPath();
+		context.moveTo(130,80);
+		context.lineTo(150,20);
+		context.lineTo(170,80);
+		context.closePath();
+		context.stroke();
+		context.fill();
+
+		//рисуем крыло ракеты
+		context.strokeStyle = "#000";
+		context.fillStyle="gray";
+		context.beginPath();
+		context.moveTo(130,190);
+		context.lineTo(110,230);
+		context.lineTo(110,280);
+		context.lineTo(120,280);
+		context.lineTo(130,260);
+		context.closePath();
+		context.stroke();
+		context.fill();
+
+		//рисуем второе крыло ракеты
+		context.strokeStyle = "#000";
+		context.fillStyle="gray";
+		context.beginPath();
+		context.moveTo(170,190);
+		context.lineTo(190,230);
+		context.lineTo(190,280);
+		context.lineTo(180,280);
+		context.lineTo(170,260);
+		context.closePath();
+		context.stroke();
+		context.fill();
+
+		//подписываем
+		context.beginPath();
+		context.fillStyle = "#0000FF";
+		context.strokeStyle = "#FF0000";
+		context.font = "italic 30pt Arial";
+		context.fillText("Ракета", 80, 320);
+		context.closePath();
+		context.stroke();
+		context.fill();
+	 }
+}
+  </script>
+  <canvas id="mypicture" width="320" height="420">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
