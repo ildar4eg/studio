@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Ëàáàðàòîðíàÿ</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="600">
+</canvas>
+</body>
+
+<script type="text/javascript">
+function fun(x)
+{
+var z;
+//z = x > -3 ? x : ( x < 3 ? -3 : ( x < 9 ? -x : 7 * x - 5 ) );
+z = x < -5 ? ( -6 * x - 34 ) / 4 : x < -3 ? ( 0 * x - 2 ) / 2 : x < 3 ? ( -4 * x - 18 ) / 6 : x > 3 ? (7 * x - 51 ) / 6 : x ;
+return z;
+}
+function graphic ( A, B, H ,Delta, Size) {
+ // çàäàåì ïàðàìåòðû ðèñóíêà: êðàÿ îòðåçêà
+ // øàã ïî x, öåíòð ãðàôèêà, ìàñøòàá
+ 
+ var a = (A !== undefined ) ? A : -9;
+ var b = (B !== undefined ) ? B : 8;
+ var h = (H !== undefined ) ? H : 0.1;
+ var delta = (Delta !== undefined ) ? Delta : 300;
+ var size = (size !== undefined ) ? Size : 20;
+ 
+ ctx.beginPath();
+ ctx.strokeStyle = '#000000';
+ ctx.lineWidth = 1;
+ ctx.moveTo(0, delta);
+ ctx.lineTo( 2 * delta, delta);
+ ctx.moveTo(delta, 0 );
+ ctx.lineTo ( delta, 2 * delta );
+ ctx.stroke();
+ 
+ 
+ 
+ 
+ //ñåòêà
+ ctx.beginPath();
+ ctx.strokeStyle = '#000000';
+ ctx.lineWidth = 1;
+ var bias = 5;
+ ctx.font = "italic 10pt Arial";
+ for (var i = -9 ; i<= 9; i++) {
+ ctx.moveTo( i * size + delta, delta - bias ); ctx.lineTo( i * size + delta, delta+bias);
+ ctx.moveTo( delta - bias, i * size + delta ); ctx.lineTo( delta+bias, i * size + delta);
+ if ( i!=0) { ctx.fillText ( i, i * size + delta - bias, delta + 4 * bias ); }
+ if ( i!=0) { ctx.fillText ( i, delta + 2 * bias, -i * size + delta + bias );}
+ }
+ ctx.fillText ( 0, delta + bias, delta + 4 * bias);
+ ctx.stroke();
+ 
+ //ðèñóíîê
+ ctx.beginPath();
+ var x = a, y = fun ( x );
+ var XX = x * size + delta, YY = -y * size + delta;
+ ctx.moveTo ( XX, YY);
+ 
+ while ( x <= b ) {
+ y = fun ( x );
+ XX = x * size + delta ; YY = -y * size + delta ;
+ ctx.lineTo (XX, YY);
+ x= x + h;
+ }
+ ctx.strokeStyle = '#FF0000';
+ ctx.lineWidth = 2;
+ ctx.stroke();
+ }
+ 
+ 
+ var myCanvas = document.getElementById('myCanvas');
+ var ctx = myCanvas.getContext ('2d');
+ 
+ //ðèñîâàòü
+ 
+ graphic( -9, 9 , 0.3, 300, 30);
+ </script>
+
+</html>
