@@ -1,0 +1,164 @@
+<script> 
+   window.onload = function() {
+
+    var drawingCanvas = document.getElementById('mypicture');
+    if(drawingCanvas && drawingCanvas.getContext) {
+     var context = drawingCanvas.getContext('2d');
+     // Рисуем прямоугольник
+		context.beginPath();
+		context.strokeStyle ="#000";
+		context.fillStyle="#ffffff";
+		context.lineWidth = 6;
+		context.moveTo(100, 70);
+		context.lineTo(80, 90);
+		context.lineTo(80, 180);
+		context.lineTo(100, 200);
+		context.lineTo(200, 200);
+		context.lineTo(220, 180);
+		context.lineTo(220, 90);
+		context.lineTo(200, 70);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 1 грань
+		context.beginPath();	
+		context.strokeStyle = "#000";
+		context.fillStyle = "#ffffff";
+		context.lineWidth = 6;
+		context.moveTo(105, 65);
+		context.lineTo(130, 45);
+		context.lineTo(220, 45);
+		context.lineTo(200, 65);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 2 грань
+		context.beginPath();	
+		context.strokeStyle = "#000";
+		context.fillStyle = "#ffffff";
+		context.lineWidth = 6;
+		context.moveTo(225, 46);
+		context.lineTo(245, 65);
+		context.lineTo(222, 88);
+		context.lineTo(205, 68);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 3 грань
+		context.beginPath();	
+		context.strokeStyle = "#000";
+		context.fillStyle = "#ffffff";
+		context.lineWidth = 6;
+		context.moveTo(246, 70);
+		context.lineTo(246, 154);
+		context.lineTo(225, 175);
+		context.lineTo(225, 91);
+		context.closePath();
+		context.stroke();
+		context.fill();
+	
+
+		// рисуем 1 точку
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(150, 140, 7, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 2 точку
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(110, 100, 7, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 3 точку
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(190, 100, 7, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 4 точку
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(110, 180, 7, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 5 точку
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(190, 180, 7, 0, Math.PI*2, true);
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 6 точку
+		context.scale(1, 1.5); // сжимаем по вертикали в 2 раза
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(235, 82, 5, 0, Math.PI*2, true);
+		context.resetTransform();
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 7 точку
+		context.scale(1.5, 1); // сжимаем по вертикали в 2 раза
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(95, 55, 5, 0, Math.PI*2, true);
+		context.resetTransform();
+		context.closePath();
+		context.stroke();
+		context.fill();
+		
+		// рисуем 8 точку
+		context.scale(1.5, 1); // сжимаем по вертикали в 2 раза
+		context.beginPath();
+		context.strokeStyle = "#000";
+		context.fillStyle = "#000";
+		context.lineWidth = 4;
+		context.arc(125, 55, 5, 0, Math.PI*2, true);
+		context.resetTransform();
+		context.closePath();
+		context.stroke();
+		context.fill();
+
+		//подписываем
+		context.beginPath();
+		context.fillStyle = "#000";
+		context.strokeStyle = "#000";
+		context.font = "italic 30pt Arial";
+		context.fillText("Кубик", 90, 300);
+		context.closePath();
+		context.stroke();
+		context.fill();
+	 }
+}
+  </script>
+  <canvas id="mypicture" width="320" height="420">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
